@@ -20,7 +20,7 @@ my_isr=my_subtotal*.10
 my_total_pagar=my_subtotal+my_ret_iva-my_iva-my_isr;
 
 select sec_pago.nextval into id from dual;
-insert into pago_horarios(my_id, my_subtotal) values (1, 'subtotal');
+insert into pago_horarios(id, subtotal, iva, isr, ret_iva, total_pagar) values (my_id, my_subtotal, my_iva, my_isr, my_ret_iva, my_total_pagar);
 end;
 /
 
